@@ -1,5 +1,5 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
-import model.UserData;
+import model.ClientData;
 import org.junit.jupiter.api.Test;
 
 import java.io.InputStreamReader;
@@ -16,7 +16,7 @@ public class JsonTests {
                 cl.getResourceAsStream("test.json")
         )){
             ObjectMapper mapper = new ObjectMapper();
-            UserData actualData = mapper.readValue(reader, UserData.class);
+            ClientData actualData = mapper.readValue(reader, ClientData.class);
 
          assertThat(actualData.getClients().get(0).getName()).isEqualTo("Кексик");
          assertThat(actualData.getClients().get(0).getAge()).isEqualTo(88);
@@ -25,11 +25,11 @@ public class JsonTests {
          assertThat(actualData.getClients().get(0).getAdditionally().getHobbies())
                  .isEqualTo("Печь кексики");
 
-            assertThat(actualData.getClients().get(1).getName()).isEqualTo("Котик");
-            assertThat(actualData.getClients().get(1).getAge()).isEqualTo(12);
-            assertThat(actualData.getClients().get(1).getAdditionally().getAddress())
+         assertThat(actualData.getClients().get(1).getName()).isEqualTo("Котик");
+         assertThat(actualData.getClients().get(1).getAge()).isEqualTo(12);
+         assertThat(actualData.getClients().get(1).getAdditionally().getAddress())
                     .isEqualTo("Коробка");
-            assertThat(actualData.getClients().get(1).getAdditionally().getHobbies())
+         assertThat(actualData.getClients().get(1).getAdditionally().getHobbies())
                     .isEqualTo("Ронять со стола вещи");
         }
     }

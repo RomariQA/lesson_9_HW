@@ -2,7 +2,7 @@ package model;
 
 import java.util.List;
 
-public class UserData {
+public class ClientData {
 
     private List<Clients> clients;
 
@@ -14,9 +14,9 @@ public class UserData {
 
         private String name;
         private Integer age;
-        private ClientsAdditionally additionally;
+        private ClientsAdditionallyData additionally;
 
-        public ClientsAdditionally getAdditionally() {
+        public ClientsAdditionallyData getAdditionally() {
             return additionally;
         }
 

@@ -1,6 +1,6 @@
 package model;
 
-public class ClientsAdditionally {
+public class ClientsAdditionallyData {
 
         private String address;
         private String hobbies;
